@@ -8,6 +8,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HtmlAgilityPack;
 
 namespace Linkgrabber
 {
@@ -27,7 +28,20 @@ namespace Linkgrabber
 
             HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
             doc.LoadHtml(htmlCode);
-            textBox2.Text = doc.DocumentNode.SelectNodes("//a[@href]")[10].GetAttributeValue("href", "nothing");
+
+            // Get next episode
+            //textBox2.Text = doc.DocumentNode.SelectNodes("//a[@href]")[10].GetAttributeValue("href", "nothing");
+            
+            // Get episode count
+            /*HtmlNodeCollection coll = doc.DocumentNode.SelectNodes("//td[@class='epnum']");
+            HtmlNode last = coll[coll.Count - 1];
+            textBox2.Text = last.InnerHtml.Replace(" ", "");*/
+
+            // Get host url
+            //textBox2.Text = new Uri(urlAddress).Host;
+
+            // Get download link
+            //textBox2.Text = doc.DocumentNode.SelectNodes("//iframe[@src]")[0].GetAttributeValue("src", "nothing");
         }
     }
 }
