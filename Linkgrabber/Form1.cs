@@ -60,5 +60,6 @@ namespace Linkgrabber
 
             MessageBox.Show("All links grabbed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
     }
 }
