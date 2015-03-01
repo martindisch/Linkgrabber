@@ -48,7 +48,7 @@ namespace Linkgrabber
             String[] urls = new String[episodeCount];
             for (int i = 0; i < episodeCount; i++)
             {
-                urls[i] = "http://" + hostUrl + "/" + coll[i].ChildNodes[0].GetAttributeValue("href", "nothing") + "\r\n";
+                urls[i] = "http://" + hostUrl + "/" + coll[i].ChildNodes[0].GetAttributeValue("href", "nothing");
             }
 
             for (int i = 0; i < episodeCount; i++)
