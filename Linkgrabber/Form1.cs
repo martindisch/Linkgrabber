@@ -54,7 +54,7 @@ namespace Linkgrabber
             for (int i = 0; i < episodeCount; i++)
             {
                 doc.LoadHtml(client.DownloadString(urls[i]));
-                textBox2.Text += doc.DocumentNode.SelectNodes("//iframe[@src]")[0].GetAttributeValue("src", "nothing") + "\r\n";
+                textBox2.Text += doc.DocumentNode.SelectNodes("//iframe[@src]")[1].GetAttributeValue("src", "nothing") + "\r\n";
                 progressBar1.PerformStep();
             }
 
